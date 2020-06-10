@@ -2,23 +2,41 @@ import java.util.Scanner;
 
 public class NegativePositive
 {
+      public static int value(int num)
+{
+
+    if (num>0)
+    {
+        return 1;
+    }
+        else if (num<0)
+    {
+        return 0;
+    }
+        else
+    {
+        return -1;
+    }
+}
     public static void main(String[] args)    // Main method
     {
-        // Scanner scanner = new Scanner(System.in);    // Scanner object to get input in console
-        //  System.out.print("Please enter any No : "); //Prompting user to enter any no
-        // int num = scanner.nextInt();//int input
-        //  int a = scanner.nextInt();
-        int a=0 ;
-        int b=-1;
-        int c=a+1;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter no : ");
+        int num = scanner.nextInt();
+         int a = value(num);
+       switch (a)
+       {
 
-        switch (0)
-        {
-            case a: {
-                System.out.println("zero");
-                switch(b) {
-                    case -1:
-                    System.out.println("nagative");
-                }
-         }
-}}}
+           case 0:{
+               System.out.println("Nagetive");}
+
+              break;
+           case 1:
+               System.out.println("positive");
+               break;
+           default:
+               System.out.println("No is zero");
+       }
+
+    }
+}
